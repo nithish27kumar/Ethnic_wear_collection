@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girls Dress Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ethnic Wear Collection</h1>
+            <div class="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </header>
+
+        <main>
+            <section id="product-list" class="product-grid">
+            </section>
+
+            <div id="cart-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">×</span>
+                    <h2>Your Cart</h2>
+                    <div id="cart-items"></div>
+                    <div id="cart-total">Total: ₹0</div>
+                    <button id="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Check if user is logged in
+        if (!localStorage.getItem("isLoggedIn")) {
+            // Redirect to login page if not logged in
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
